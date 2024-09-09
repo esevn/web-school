@@ -1,3 +1,14 @@
+<?php 
+
+require 'koneksi.php';
+
+$artikels = getdata("SELECT * FROM `artikels`");
+
+// var_dump($artikels);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,47 +89,21 @@
         <hr>
         <br>
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 m-auto">
+              <?php foreach($artikels as $artikel): ?>
                 <div class="bg-white rounded-lg shadow-slate-600 shadow-md overflow-hidden flex flex-col md:flex-row">
                 <div class="w-full h-full">
-                    <img src="./images/idn/DSC_0099.JPG" alt="Gambar Berita" class="w-full h-64 object-cover">
+                    <img src="./images/idn/<?= $artikel ['image'] ?>" alt="Gambar Berita" class="w-full h-64 object-cover">
                     <div class="mt-4 px-4 text-gray-600">
                         <p class="text-sm"><strong>Tanggal:</strong> 17 Agustus 2024</p>
                         <p class="text-sm"><strong>Dibuat Oleh:</strong> Alan Nu.</p>
                         <br>
-                        <h2 class="text-xl font-bold font-Libre text-red-600">Lomba merayakan hari kemerdekaan indonesia yang ke 79</h2>
-                        <p class="text-sm md:text-base text-gray-800 mb-4">Ini adalah teks berita yang menjelaskan detail lebih lanjut mengenai topik berita. Teks ini bisa mencakup berbagai aspek dari berita tersebut, seperti latar belakang, kejadian penting, dan kutipan dari sumber terkait. Anda dapat memperpanjang paragraf ini sesuai kebutuhan.</p>
+                        <h2 class="text-xl font-bold font-Libre text-red-600"><?= $artikel ['title']?></h2>
+                        <p class="text-sm md:text-base text-gray-800 mb-4"><?= $artikel ['content'] ?></p>
                         <button class="text-sm mb-4    w-40 py-2 text-[#6592ec] border border-solid border-[#6592ec] transition-all duration-200 hover:bg-[#6592ec] hover:text-white  hover:shadow-xl hover:rounded-md">Learn More</button>
                     </div>
                 </div>
               </div>
-
-                <div class="bg-white rounded-lg shadow-slate-600 shadow-md overflow-hidden flex flex-col md:flex-row">
-                <div class="w-full h-full">
-                    <img src="./images/idn/DSC_0099.JPG" alt="Gambar Berita" class="w-full h-64 object-cover">
-                    <div class="mt-4 px-4 text-gray-600">
-                        <p class="text-sm"><strong>Tanggal:</strong> 17 Agustus 2024</p>
-                        <p class="text-sm"><strong>Dibuat Oleh:</strong> Alan Nu.</p>
-                        <br>
-                        <h2 class="text-xl font-bold font-Libre text-red-600">Lomba merayakan hari kemerdekaan indonesia yang ke 79</h2>
-                        <p class="text-sm md:text-base text-gray-800 mb-4">Ini adalah teks berita yang menjelaskan detail lebih lanjut mengenai topik berita. Teks ini bisa mencakup berbagai aspek dari berita tersebut, seperti latar belakang, kejadian penting, dan kutipan dari sumber terkait. Anda dapat memperpanjang paragraf ini sesuai kebutuhan.</p>
-                        <button class="text-sm mb-4    w-40 py-2 text-[#6592ec] border border-solid border-[#6592ec] transition-all duration-200 hover:bg-[#6592ec] hover:text-white  hover:shadow-xl hover:rounded-md">Learn More</button>
-                    </div>
-                </div>
-              </div>
-
-                <div class="bg-white rounded-lg shadow-slate-600 shadow-md overflow-hidden flex flex-col md:flex-row">
-                <div class="w-full h-full">
-                    <img src="./images/idn/DSC_0099.JPG" alt="Gambar Berita" class="w-full h-64 object-cover">
-                    <div class="mt-4 px-4 text-gray-600">
-                        <p class="text-sm"><strong>Tanggal:</strong> 17 Agustus 2024</p>
-                        <p class="text-sm"><strong>Dibuat Oleh:</strong> Alan Nu.</p>
-                        <br>
-                        <h2 class="text-xl font-bold font-Libre text-red-600">Lomba merayakan hari kemerdekaan indonesia yang ke 79</h2>
-                        <p class="text-sm md:text-base text-gray-800 mb-4">Ini adalah teks berita yang menjelaskan detail lebih lanjut mengenai topik berita. Teks ini bisa mencakup berbagai aspek dari berita tersebut, seperti latar belakang, kejadian penting, dan kutipan dari sumber terkait. Anda dapat memperpanjang paragraf ini sesuai kebutuhan.</p>
-                        <button class="text-sm mb-4    w-40 py-2 text-[#6592ec] border border-solid border-[#6592ec] transition-all duration-200 hover:bg-[#6592ec] hover:text-white  hover:shadow-xl hover:rounded-md">Learn More</button>
-                    </div>
-                </div>
-              </div>
+              <?php endforeach; ?>
           </div>
       </div>
 

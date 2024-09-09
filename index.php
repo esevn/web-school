@@ -1,3 +1,15 @@
+<?php 
+
+require 'koneksi.php';
+
+$artikels = getdata("SELECT * FROM `artikels`");
+
+// var_dump($artikels);
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
