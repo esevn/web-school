@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/logo-idn.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/output.css">
+    <title>Layanan</title>
+    <style>
+      .profil {
+        flex: 1;
+        min-width: 300px;
+        max-width: 500px;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        height: 3px;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #1362ff;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background-color: #ffff;
+      }
+    </style>
+    </head>
+    <body>
+        <nav class="w-full fixed z-30 bg-slate-50 ">
+      <div
+        class="container mx-auto px-2 py-[10px] flex justify-between items-center"
+      >
+        <div class="logo w-60 overflow-hidden flex items-center px-2 md:ml-2">
+          <img src="./images/logo-idn.png" alt="" class="w-[40px] h-[40px]  "/>
+          <h1 class="hidden md:block px-2 font-semibold">SMA TI <span class="text-[#6c8efd]">HSI IDN</span></h1>
+        </div>
+        <div class=" flex justify-center items-center relative ">
+          <ul class="hidden md:flex m-auto">
+            <li class="text-sm px-5 sm:px-1 font-semibold"><a class="hover:border-b-2 hover:rounded-sm hover:border-blue-600 
+              transition ease-in-out duration-200  px-3 py-2" 
+                href="index.html">Beranda</a></li>
+            <li class="text-sm px-5 sm:px-1 font-semibold"><a class="hover:border-b-2 hover:rounded-sm hover:border-blue-600 
+              transition ease-in-out duration-200  px-3 py-2" 
+                href="about-us.html">Tentang Kami</a></li>  
+            <li class="text-sm px-5 sm:px-1 font-semibold"><a class="hover:border-b-2 hover:rounded-sm hover:border-blue-600 
+              transition ease-in-out duration-200  px-3 py-2" 
+                href="layanan.html">Layanan</a></li>
+            <li class="text-sm px-5 sm:px-1 font-semibold"><a class="hover:border-b-2 hover:rounded-sm hover:border-blue-600 
+              transition ease-in-out duration-200  px-3 py-2" 
+                href="program.html">Program</a></li>
+            <li class="text-sm px-5 sm:px-1 font-semibold"><a class="hover:border-b-2 hover:rounded-sm hover:border-blue-600 
+              transition ease-in-out duration-200  px-3 py-2" 
+                href="info.html">Info</a></li>
+            <li class="text-sm px-5 sm:px-1 font-semibold"><a class="hover:border-b-2 hover:rounded-sm hover:border-blue-600 
+              transition ease-in-out duration-200  px-3 py-2" 
+                href="galery.html">Galeri</a></li>
+          </ul>
+        </div>
+
+        <button class="px-4 py-3 bg-blue-600 text-white font-semibold rounded-full hidden md:block">Regiter now</button>
+        <button onclick="openNavbar()" class="md:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path d="M32,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H40A8,8,0,0,1,32,64ZM216,96H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,40H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,40H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>
+        </button>
+    </nav>
+
+
+    <!-- Aside Navbar -->
+
+    <aside class="fixed z-50 w-full h-full bg-[#00000081] transition-all duration-200 ease-in-out -translate-x-full">
+      <div class="container w-60 h-full bg-white ">
+        <div class="flex flex-col p-2 relative ">
+          <div onclick="closeNavbar()" class="absolute cursor-pointer right-2 top-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 256" class="fill-black">
+              <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+            </svg>
+          </div>
+          <div class="absolute left-2 mt-1">
+            <div class="w-10 h-10">
+              <img src="./images/logo-idn.png" alt="">
+            </div>
+          </div>
+          <ul class="mt-28 flex flex-col gap-5 text-left ml-5 text-slate-700 font-semibold">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about-us.html">Tentang kami</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="galery.html">Galeri</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <section class="bg-[url('/images/gradient_2.jpg')] py-10">
+          <div class="container px-4 mx-auto mt-3 md:mt-10">
+            <div class="flex flex-col gap-4 py-5">
+            <h1 class="text-2xl md:text-4xl text-white font-bold font-Libre">Mengapa harus kami ?</h1>
+            <p class="text-sm line-clamp-2 text-white">Alasan kenapa harus memilih untuk bergabung dengan SMA TI HSI - IDN.</p>
+          </div>
+        <div class="flex overflow-x-auto p-4 gap-5 items-center border-2 border-blue-600 rounded-md custom-scrollbar" style="-webkit-overflow-scrolling: touch">
+          <!-- Profil 1 -->
+          <div class="profil flex flex-col text-center items-center w-60 gap-4 p-4 border-2 border-white rounded-md">
+            <div class="photo overflow-hidden w-36 h-36 rounded-md border-2 border-black">
+              <img src="./images/vasilitas1.jpg" class="object-cover w-full h-full" alt="Foto Profil">
+            </div>
+            <h3 class="font-semibold text-white">Lingkungan Nyaman</h3>
+            <p class="text-sm text-white">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, deleniti.
+            </p>
+          </div>
+
+          <!-- Profil 2 -->
+          <div class="profil flex flex-col text-center items-center gap-4 p-4 border-2 border-white rounded-md">
+            <div class="photo overflow-hidden w-36 h-36 rounded-md border-2 border-black">
+              <img src="./images/vasilitas3.jpg" class="object-cover w-full h-full" alt="Foto Profil">
+            </div>
+            <h3 class="font-semibold text-white">Fasilitas Lengkap</h3>
+            <p class="text-sm text-white">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
+              quibusdam.
+            </p>
+          </div>
+
+          <!-- layanan 3 -->
+            <div class="profil flex flex-col text-center items-center gap-4 p-4 border-2 border-white rounded-md">
+            <div class="photo overflow-hidden w-36 h-36 rounded-md border-2 border-black">
+              <img src="./images/guru.jpg" class="object-cover w-full h-full" alt="Foto Profil">
+            </div>
+            <h3 class="font-semibold text-white">Pengajar Kompoten</h3>
+            <p class="text-sm text-white">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
+              quibusdam.
+            </p>
+          </div>
+
+          <!-- Layanan 4 -->
+          <div class="profil flex flex-col text-center items-center gap-4 p-4 border-2 border-white rounded-md">
+            <div class="photo overflow-hidden w-36 h-36 rounded-md border-2 border-black">
+              <img src="./images/kerjasama.jpg" class="object-cover w-full h-full" alt="Foto Profil">
+            </div>
+            <h3 class="font-semibold text-white">Kerjasama Luas</h3>
+            <p class="text-sm text-white">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae
+              quibusdam.
+            </p>
+          </div>
+        </div>
+      </div>
+          
+    </section>
+     <section class="bg-[#1C3988] w-full h-fit">
+          <div class="container m-auto flex flex-col px-4 md:px-10 py-20">
+            <div class="text-left text-white flex flex-col gap-4 mb-5">
+            <h2 class="font-bold text-2xl md:text-4xl font-Libre">Kegiatan Extrakurikuler</h2>
+            <p class="text-sm sm:text-base md:text-lg ">Fulfil your child's dreams, enjoy all the 
+              achievements in this school and luxurious residence to the fullest.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 px-5 py- 
+            10 m-auto">
+
+            <div class="flex flex-col bg-white rounded-t-md shadow-xl">
+                <div class="rounded-t-md overflow-hidden">
+                <img src="./images/vasilitas1.jpg" alt="" class="w-full h-full bg-cover">
+              </div>  
+              <h5 class="text-xl md:text-2xl px-4 py-3 font-Merriweather">Teacher's room</h5>
+              <p class="text-sm px-4 py-4">Office Area</p>
+            </div>
+
+            <div class="flex flex-col bg-white rounded-t-md shadow-xl">
+                <div class="rounded-t-md overflow-hidden">
+                <img src="./images/vasilitas3.jpg" alt="" class="w-full h-full bg-cover">
+              </div>  
+              <h5 class="text-xl md:text-2xl px-4 py-3 font-Merriweather">Teacher's room</h5>
+              <p class="text-sm px-4 py-4">Office Area</p>
+            </div>
+
+            <div class="flex flex-col bg-white rounded-t-md shadow-xl">
+                <div class="rounded-t-md overflow-hidden">
+                <img src="./images/vasilitas3.jpg" alt="" class="w-full h-full bg-cover">
+              </div>  
+              <h5 class="text-xl md:text-2xl px-4 py-3 font-Merriweather">Teacher's room</h5>
+              <p class="text-sm px-4 py-4">Office Area</p>
+            </div>
+
+            <div class="flex flex-col bg-white rounded-t-md shadow-xl">
+                <div class="rounded-t-md overflow-hidden">
+                <img src="./images/vasilitas3.jpg" alt="" class="w-full h-full bg-cover">
+              </div>  
+              <h5 class="text-xl md:text-2xl px-4 py-3 font-Merriweather">Teacher's room</h5>
+              <p class="text-sm px-4 py-4">Office Area</p>
+            </div>
+
+            <div class="flex flex-col bg-white rounded-t-md shadow-xl">
+                <div class="rounded-t-md overflow-hidden">
+                <img src="./images/DSC_0104.JPG" alt="" class="w-full h-full bg-cover">
+              </div>  
+              <h5 class="text-xl md:text-2xl px-4 py-3 font-Merriweather">Teacher's room</h5>
+              <p class="text-sm px-4 py-4">Office Area</p>
+            </div>
+
+            <div class="flex flex-col bg-white rounded-t-md shadow-xl">
+                <div class="rounded-t-md overflow-hidden">
+                <img src="./images/DSC_0104.JPG" alt="" class="w-full h-full bg-cover">
+              </div>  
+              <h5 class="text-xl md:text-2xl px-4 py-3 font-Merriweather">Teacher's room</h5>
+              <p class="text-sm px-4 py-4">Office Area</p>
+            </div>
+
+            <div class="flex flex-col bg-white rounded-t-md shadow-xl">
+                <div class="rounded-t-md overflow-hidden">
+                <img src="./images/DSC_0239.JPG" alt="" class="w-full h-full bg-cover">
+              </div>  
+              <h5 class="text-xl md:text-2xl px-4 py-3 font-Merriweather">Teacher's room</h5>
+              <p class="text-sm px-4 py-4">Office Area</p>
+            </div>
+
+            <div class="flex flex-col bg-white rounded-t-md shadow-xl">
+                <div class="rounded-t-md overflow-hidden">
+                <img src="./images/DSC_0104.JPG" alt="" class="w-full h-full bg-cover">
+              </div>  
+              <h5 class="text-xl md:text-2xl px-4 py-3 font-Merriweather">Teacher's room</h5>
+              <p class="text-sm px-4 py-4">Office Area</p>
+            </div>
+          </div>       
+          </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
